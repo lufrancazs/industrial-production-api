@@ -11,13 +11,13 @@ import java.util.Objects;
 public class RawMaterial {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
     private String name;
 
-    @Column
+    @Column(name = "stock_qty")
     private Long stockQuantity;
 
     @OneToMany(mappedBy = "rawMaterial")
